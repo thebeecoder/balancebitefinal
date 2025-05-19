@@ -30,9 +30,9 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
-assets/model.onnx
-assets/best.onnx
-assets/model.tflite
+/assets/model.onnx
+/assets/best.onnx
+/assets/model.tflite
 
 # Symbolication related
 app.*.symbols
