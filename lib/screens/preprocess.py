@@ -6,6 +6,16 @@ import io
 
 app = Flask(__name__)
 
+# Model download function
+def download_model():
+    model_url = "https://drive.google.com/uc?export=download&id=1TCJCScvCus4BHC-wwrsrkVAGnP5BtcvT"
+    output_path = "assets/model.onnx"
+    if not os.path.exists(output_path):
+        print("Downloading model from Google Drive...")
+        gdown.download(model_url, output_path, quiet=False)
+    else:
+        print("Model already downloaded!")
+        
 # Preprocessing function
 def preprocess_image(image_bytes):
     # Load image from bytes
